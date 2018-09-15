@@ -1,0 +1,30 @@
+{
+  "npmScope": "Code4Good",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "c4g": {
+      "tags": []
+    },
+    "c4g-e2e": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    },
+    "utils": {
+      "tags": []
+    },
+    "feature-projects": {
+      "tags": []
+    },
+    "feature-user": {
+      "tags": []
+    }
+  }
+}
