@@ -25,6 +25,15 @@
     },
     "feature-user": {
       "tags": []
+    },
+    "state": {
+      "tags": []
+    },
+    "feature-project-detail": {
+      "tags": []
+    },
+    "feature-auth": {
+      "tags": []
     }
   }
 }

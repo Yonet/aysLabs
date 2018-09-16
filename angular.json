@@ -23,7 +23,7 @@
               "apps/c4g/src/assets"
             ],
             "styles": [
-              "apps/c4g/src/styles.css"
+              "apps/c4g/src/styles.scss"
             ],
             "scripts": []
           },
@@ -72,7 +72,7 @@
             "tsConfig": "apps/c4g/tsconfig.spec.json",
             "karmaConfig": "apps/c4g/karma.conf.js",
             "styles": [
-              "apps/c4g/src/styles.css"
+              "apps/c4g/src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -141,7 +141,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/blibs/uild-angular:karma",
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "libs/ui/src/test.ts",
             "tsConfig": "libs/ui/tsconfig.spec.json",
@@ -149,7 +149,7 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/blibs/uild-angular:tslint",
+          "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
               "libs/ui/tsconfig.lib.json",
@@ -166,7 +166,7 @@
       "root": "libs/utils",
       "sourceRoot": "libs/utils/src",
       "projectType": "library",
-      "prefix": "Code4Good",
+      "prefix": "c4g",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -257,12 +257,109 @@
           }
         }
       }
+    },
+    "state": {
+      "root": "libs/state",
+      "sourceRoot": "libs/state/src",
+      "projectType": "library",
+      "prefix": "c4g",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/state/src/test.ts",
+            "tsConfig": "libs/state/tsconfig.spec.json",
+            "karmaConfig": "libs/state/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/state/tsconfig.lib.json",
+              "libs/state/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "feature-project-detail": {
+      "root": "libs/feature-project-detail",
+      "sourceRoot": "libs/feature-project-detail/src",
+      "projectType": "library",
+      "prefix": "c4g",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/feature-project-detail/src/test.ts",
+            "tsConfig": "libs/feature-project-detail/tsconfig.spec.json",
+            "karmaConfig": "libs/feature-project-detail/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/feature-project-detail/tsconfig.lib.json",
+              "libs/feature-project-detail/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "feature-auth": {
+      "root": "libs/feature-auth",
+      "sourceRoot": "libs/feature-auth/src",
+      "projectType": "library",
+     "prefix": "c4g",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/feature-auth/tsconfig.lib.json",
+            "project": "libs/feature-auth/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "libs/feature-auth/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/feature-auth/src/test.ts",
+            "tsConfig": "libs/feature-auth/tsconfig.spec.json",
+            "karmaConfig": "libs/feature-auth/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/feature-auth/tsconfig.lib.json",
+              "libs/feature-auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
     "warnings": {
       "typescriptMismatch": false,
-      "versionMismatch": false
+      "versionMismatch": false,
+      "packageManager": "yarn"
     },
     "defaultCollection": "@nrwl/schematics"
   },

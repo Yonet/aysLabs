@@ -9,6 +9,8 @@
     "**/*.spec.ts"
   ],
   "include": [
-    "**/*.ts"
-  ]
+    "**/*.ts",
+    "../../libs/feature-projects/src/index.ts",
+    "../../libs/feature-auth/src/index.ts"
+]
 }

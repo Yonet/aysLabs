@@ -27,6 +27,15 @@
       ],
       "@Code4Good/feature-user": [
         "libs/feature-user/src/index.ts"
+      ],
+      "@Code4Good/state": [
+        "libs/state/src/index.ts"
+      ],
+      "@Code4Good/feature-project-detail": [
+        "libs/feature-project-detail/src/index.ts"
+      ],
+      "@Code4Good/feature-auth": [
+        "libs/feature-auth/src/index.ts"
       ]
     }
   },
