@@ -12,7 +12,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
 
 body {
   font-family: Roboto, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica,
-  Arial, 'Lucida Grande', sans-serif;
+    Arial, 'Lucida Grande', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -38,10 +38,10 @@ body {
   font-style: normal;
   font-weight: 300;
   src: local('Roboto Light'), local('Roboto-Light'),
-  url(assets/roboto-light.woff2) format('woff2');
+    url(assets/roboto-light.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-  U+FEFF, U+FFFD;
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -49,10 +49,10 @@ body {
   font-style: normal;
   font-weight: 400;
   src: local('Roboto'), local('Roboto-Regular'),
-  url(assets/roboto-regular.woff2) format('woff2');
+    url(assets/roboto-regular.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-  U+FEFF, U+FFFD;
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -60,10 +60,10 @@ body {
   font-style: normal;
   font-weight: 500;
   src: local('Roboto Medium'), local('Roboto-Medium'),
-  url(assets/roboto-medium.woff2) format('woff2');
+    url(assets/roboto-medium.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-  U+FEFF, U+FFFD;
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
 /* Material Icons Extended */
