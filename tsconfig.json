@@ -16,26 +16,35 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@Code4Good/ui": [
+      "@AysLabs/ui": [
         "libs/ui/src/index.ts"
       ],
-      "@Code4Good/utils": [
+      "@AysLabs/utils": [
         "libs/utils/src/index.ts"
       ],
-      "@Code4Good/feature-projects": [
+      "@AysLabs/feature-projects": [
         "libs/feature-projects/src/index.ts"
       ],
-      "@Code4Good/feature-user": [
+      "@AysLabs/feature-user": [
         "libs/feature-user/src/index.ts"
       ],
-      "@Code4Good/state": [
+      "@AysLabs/state": [
         "libs/state/src/index.ts"
       ],
-      "@Code4Good/feature-project-detail": [
+      "@AysLabs/feature-project-detail": [
         "libs/feature-project-detail/src/index.ts"
       ],
-      "@Code4Good/feature-auth": [
+      "@AysLabs/feature-auth": [
         "libs/feature-auth/src/index.ts"
+      ],
+      "@AysLabs/ui-xr": [
+        "libs/ui-xr/src/index.ts"
+      ],
+      "@AysLabs/feature-xr": [
+        "libs/feature-xr/src/index.ts"
+      ],
+      "@AysLabs/ui-shell": [
+        "libs/ui-shell/src/index.ts"
       ]
     }
   },

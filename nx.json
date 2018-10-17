@@ -1,5 +1,5 @@
 {
-  "npmScope": "Code4Good",
+  "npmScope": "AysLabs",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -39,6 +39,18 @@
       "tags": []
     },
     "demo-e2e": {
+      "tags": []
+    },
+    "ui-xr": {
+      "tags": []
+    },
+    "feature-xr": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    },
+    "ui-shell": {
       "tags": []
     }
   }

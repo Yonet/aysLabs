@@ -9,7 +9,7 @@ import {
 } from './+state/projects.reducer';
 import { ProjectsEffects } from './+state/projects.effects';
 import { ProjectsComponent } from './projects/projects.component';
-import { UiModule } from '@Code4Good/ui';
+import { UiModule } from '@AysLabs/ui';
 @NgModule({
   imports: [
     CommonModule,

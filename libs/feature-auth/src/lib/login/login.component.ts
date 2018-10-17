@@ -4,7 +4,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Credentials } from '../+state/models';
 
 @Component({
-  selector: 'c4g-login',
+  selector: 'ay-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })

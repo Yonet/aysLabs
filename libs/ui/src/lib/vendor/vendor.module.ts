@@ -1,7 +1,3 @@
-import {
-  BrowserAnimationsModule,
-  NoopAnimationsModule
-} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -12,30 +8,37 @@ import {
   MatCheckboxModule,
   MatDatepickerModule,
   MatDialogModule,
+  MatGridListModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
+  MatMenuModule,
   MatNativeDateModule,
   MatProgressSpinnerModule,
+  MatSidenavModule,
   MatTableModule,
-  MatTabsModule
+  MatTabsModule,
+  MatToolbarModule
 } from '@angular/material';
 
 @NgModule({
   exports: [
-    CdkTableModule,
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,
     MatDatepickerModule,
     MatDialogModule,
+    MatGridListModule,
     MatIconModule,
     MatInputModule,
     MatListModule,
+    MatMenuModule,
     MatNativeDateModule,
     MatProgressSpinnerModule,
+    MatSidenavModule,
     MatTableModule,
     MatTabsModule,
+    MatToolbarModule,
     ReactiveFormsModule
   ]
 })

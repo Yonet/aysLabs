@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'c4g-projects',
+  selector: 'ay-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })

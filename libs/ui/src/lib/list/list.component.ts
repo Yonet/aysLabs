@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'c4g-list',
+  selector: 'ay-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+// import  * as WebXRPolyfill from 'webxr-polyfill';
 
+// const polyfill = new WebXRPolyfill();
 @Component({
   selector: 'ay-root',
   templateUrl: './app.component.html',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
+  constructor() {
+    console.log('polyfil ', navigator);
+  }
 }

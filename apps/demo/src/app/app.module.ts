@@ -14,7 +14,8 @@ import { storeFreeze } from 'ngrx-store-freeze';
 import { StoreModule } from '@ngrx/store';
 
 // Lib imports
-import { PageNotFoundComponent, UiModule } from '@Code4Good/ui';
+import { PageNotFoundComponent, UiModule } from '@AysLabs/ui';
+import { UiShellModule } from '@AysLabs/ui-shell';
 
 // Local imports
 import { AppComponent } from './app.component';
@@ -24,10 +25,10 @@ export const routes: Routes = [
   { path: '', redirectTo: '/projects', pathMatch: 'full' },
   {
     path: 'projects',
-    loadChildren: '@Code4Good/feature-projects#FeatureProjectsModule'
+    loadChildren: '@AysLabs/feature-projects#FeatureProjectsModule'
     // canActivate: [AuthGuard],
   },
-  // { path: 'login', loadChildren: '@Code4Good/feature-auth#FeatureAuthModule' },
+  // { path: 'login', loadChildren: '@AysLabs/feature-auth#FeatureAuthModule' },
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -46,6 +47,7 @@ export const routes: Routes = [
     ),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreRouterConnectingModule,
+    UiShellModule,
     UiModule
   ],
   providers: [],

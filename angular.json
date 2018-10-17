@@ -378,6 +378,9 @@
               "apps/demo/src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              },
               "apps/demo/src/styles.scss"
             ],
             "scripts": []
@@ -405,7 +408,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "demo:build"
+            "browserTarget": "demo:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -476,6 +480,165 @@
           }
         }
       }
+    },
+    "ui-xr": {
+      "root": "libs/ui-xr",
+      "sourceRoot": "libs/ui-xr/src",
+      "projectType": "library",
+      "prefix": "xr",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui-xr/tsconfig.lib.json",
+            "project": "libs/ui-xr/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui-xr/src/test.ts",
+            "tsConfig": "libs/ui-xr/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-xr/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-xr/tsconfig.lib.json",
+              "libs/ui-xr/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "feature-xr": {
+      "root": "libs/feature-xr",
+      "sourceRoot": "libs/feature-xr/src",
+      "projectType": "library",
+      "prefix": "ay",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/feature-xr/tsconfig.lib.json",
+            "project": "libs/feature-xr/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/feature-xr/src/test.ts",
+            "tsConfig": "libs/feature-xr/tsconfig.spec.json",
+            "karmaConfig": "libs/feature-xr/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/feature-xr/tsconfig.lib.json",
+              "libs/feature-xr/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "api": {
+      "root": "apps/api",
+      "sourceRoot": "apps/api/src",
+      "projectType": "application",
+      "prefix": "api",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/builders:node-build",
+          "options": {
+            "outputPath": "dist/apps/api",
+            "main": "apps/api/src/main.ts",
+            "tsConfig": "apps/api/tsconfig.app.json"
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api/src/environments/environment.ts",
+                  "with": "apps/api/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/builders:node-execute",
+          "options": {
+            "buildTarget": "api:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/api/tsconfig.app.json",
+              "apps/api/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/api/jest.config.js",
+            "tsConfig": "apps/api/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "ui-shell": {
+      "root": "libs/ui-shell",
+      "sourceRoot": "libs/ui-shell/src",
+      "projectType": "library",
+      "prefix": "ay",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui-shell/tsconfig.lib.json",
+            "project": "libs/ui-shell/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui-shell/src/test.ts",
+            "tsConfig": "libs/ui-shell/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-shell/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-shell/tsconfig.lib.json",
+              "libs/ui-shell/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -486,5 +649,5 @@
     },
     "defaultCollection": "@nrwl/schematics"
   },
-  "defaultProject": "c4g"
+  "defaultProject": "demo"
 }

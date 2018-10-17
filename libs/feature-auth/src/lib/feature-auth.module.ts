@@ -9,7 +9,7 @@ import {
 } from './+state/auth.reducer';
 import { AuthEffects } from './+state/auth.effects';
 import { LoginComponent } from './login/login.component';
-import { UiModule } from '@Code4Good/ui';
+import { UiModule } from '@AysLabs/ui';
 @NgModule({
   imports: [
     CommonModule,
