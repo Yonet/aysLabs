@@ -10,6 +10,7 @@
   ],
   "include": [
     "**/*.ts",
-    "../../libs/feature-projects/src/index.ts"
+    "../../libs/feature-projects/src/index.ts",
+    "../../libs/feature-xr/src/index.ts"
   ]
 }

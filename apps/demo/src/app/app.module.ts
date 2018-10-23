@@ -22,12 +22,18 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/projects', pathMatch: 'full' },
+  { path: '', redirectTo: '/xr', pathMatch: 'full' },
   {
-    path: 'projects',
-    loadChildren: '@AysLabs/feature-projects#FeatureProjectsModule'
+    path: 'xr',
+    loadChildren: '@AysLabs/feature-xr#FeatureXrModule'
     // canActivate: [AuthGuard],
   },
+  // { path: '', redirectTo: '/projects', pathMatch: 'full' },
+  // {
+  //   path: 'projects',
+  //   loadChildren: '@AysLabs/feature-projects#FeatureProjectsModule'
+  //   // canActivate: [AuthGuard],
+  // },
   // { path: 'login', loadChildren: '@AysLabs/feature-auth#FeatureAuthModule' },
   { path: '**', component: PageNotFoundComponent }
 ];
