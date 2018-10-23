@@ -41,7 +41,6 @@ export class CreateAtSurfaceComponent implements OnInit {
   // canvas;
   @ViewChild('canvas') canvas;
 
-
   vrDisplay;
   vrControls;
   arView;
