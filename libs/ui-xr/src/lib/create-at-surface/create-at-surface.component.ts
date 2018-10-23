@@ -38,10 +38,10 @@ export class CreateAtSurfaceComponent implements OnInit {
     new Color(0x000000)
   ];
 
-  @ViewChild('canvas') private canvasRef: ElementRef;
-  private get canvas(): HTMLCanvasElement {
-    return this.canvasRef.nativeElement;
-  }
+  // canvas;
+  @ViewChild('canvas') canvas;
+
+
   vrDisplay;
   vrControls;
   arView;

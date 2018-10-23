@@ -9,7 +9,7 @@
     "st": "ng serve --port=3000",
     "start": "ng serve",
     "server": "ng serve api",
-    "pages": "ng build --prod --project=demo --output-path docs --base-href aysLabs",
+    "pages": "ng build --project=demo --prod --output-path docs --base-href aysLabs",
     "build": "npm run build:foundry && ng build",
     "build:foundry": "mkdirp dist && cp -R src/main dist/ && cp nginx.conf dist/",
     "build:aot": "npm run build -- --aot",
