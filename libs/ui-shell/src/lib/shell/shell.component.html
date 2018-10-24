@@ -3,9 +3,9 @@
     #drawer
     class="sidenav"
     fixedInViewport="true"
-    [attr.role]="isHandset ? 'dialog' : 'navigation'"
-    [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
-    [opened]="!(isHandset | async)!.matches">
+    [attr.role]="'dialog'"
+    [mode]="'over'"
+    [opened]="true">
     <mat-toolbar color="primary">
       <!--TODO: Logo goes here-->
       <img src="" alt="">
@@ -20,8 +20,7 @@
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="(isHandset | async)!.matches">
+        (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">more_vert</mat-icon>
       </button>
       <span><a href="/">{{title}}</a></span>

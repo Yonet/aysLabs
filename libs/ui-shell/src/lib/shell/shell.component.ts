@@ -21,8 +21,5 @@ export class ShellComponent {
     { name: 'AR', path: '/ar' },
     { name: 'VR', path: '/vr' }
   ];
-  isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(
-    Breakpoints.Handset
-  );
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor() {}
 }
