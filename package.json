@@ -51,6 +51,8 @@
     "@nrwl/nx": "6.4.0",
     "core-js": "^2.5.4",
     "express": "4.16.3",
+    "firebase-admin": "^6.1.0",
+    "resonance-audio": "^1.0.0",
     "rxjs": "^6.3.3",
     "three": "^0.97.0",
     "three.ar.js": "^0.1.8",

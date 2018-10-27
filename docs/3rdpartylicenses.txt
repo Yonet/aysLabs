@@ -26,9 +26,9 @@ THE SOFTWARE.
 code4good
 MIT
 
-@ay/ui-shell
-
 @c4g/ui
+
+@ay/ui-shell
 
 @xr/ui-xr
 

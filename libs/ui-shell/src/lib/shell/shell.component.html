@@ -11,7 +11,7 @@
       <img src="" alt="">
     </mat-toolbar>
     <mat-nav-list>
-      <a *ngFor="let link of links" mat-list-item [routerLink]="link.path">{{link.name}}</a>
+      <a *ngFor="let link of links" mat-list-item [routerLink]="link.path" class="link">{{link.name}}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -23,7 +23,7 @@
         (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">more_vert</mat-icon>
       </button>
-      <span><a href="/">{{title}}</a></span>
+      <span><a href="/" class="title">{{title}}</a></span>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
