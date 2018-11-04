@@ -1,1 +1,4 @@
-<xr-display-at-location [data]="data | async"></xr-display-at-location>
+<p> {{info}} </p>
+<xr-ar-button (xrPresent)="onSessionStarted($event)"></xr-ar-button>
+<canvas #canvas></canvas>
+<!--<xr-display-at-location [data]="data | async"></xr-display-at-location>-->

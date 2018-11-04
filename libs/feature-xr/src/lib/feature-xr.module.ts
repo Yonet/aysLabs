@@ -9,7 +9,7 @@ import { GeoArComponent } from './geo-ar/geo-ar.component';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: '', pathMatch: 'full', component: CreateAtSurfaceComponent }
+      { path: '', pathMatch: 'full', component: GeoArComponent }
     ]),
     UiXrModule
   ],
