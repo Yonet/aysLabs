@@ -7,7 +7,10 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ListComponent implements OnInit {
   @Input() items = [];
-  @Output() upvote = new EventEmitter();
+  @Input() options = {};
+  @Output() clicked = new EventEmitter();
+  @Output() hovered = new EventEmitter();
+  @Output() dragged= new EventEmitter();
 
   constructor() {}
 
