@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 // 3rd party imports
 import { EffectsModule } from '@ngrx/effects';
-import { MatIconModule, MatIconRegistry } from '@angular/material';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { NxModule } from '@nrwl/angular';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
