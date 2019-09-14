@@ -8,6 +8,9 @@
     "nx.json": "*"
   },
   "projects": {
+    "api": {
+      "tags": []
+    },
     "c4g": {
       "tags": []
     },
@@ -45,9 +48,6 @@
       "tags": []
     },
     "feature-xr": {
-      "tags": []
-    },
-    "api": {
       "tags": []
     },
     "ui-shell": {

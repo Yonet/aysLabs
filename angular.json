@@ -594,25 +594,7 @@
     }
   },
   "cli": {
-    "warnings": {
-      "typescriptMismatch": false,
-      "versionMismatch": false,
-      "packageManager": "npm"
-    },
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/node"
   },
-  "defaultProject": "demo",
-  "schematics": {
-    "@nrwl/schematics:library": {
-      "unitTestRunner": "karma",
-      "framework": "angular"
-    },
-    "@nrwl/schematics:application": {
-      "unitTestRunner": "karma",
-      "e2eTestRunner": "protractor"
-    },
-    "@nrwl/schematics:node-application": {
-      "framework": "express"
-    }
-  }
+  "defaultProject": "api"
 }
