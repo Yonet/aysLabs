@@ -10,7 +10,7 @@ import { MatIconModule, MatIconRegistry } from '@angular/material';
 import { NxModule } from '@nrwl/angular';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { storeFreeze } from 'ngrx-store-freeze';
+
 import { StoreModule } from '@ngrx/store';
 
 // Lib imports
@@ -48,10 +48,16 @@ export const routes: Routes = [
     RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
     StoreModule.forRoot(
       {},
-      { metaReducers: !environment.production ? [storeFreeze] : [] }
+      {
+        metaReducers: !environment.production ? [] : [],
+        runtimeChecks: {
+          strictStateImmutability: true,
+          strictActionImmutability: true
+        }
+      }
     ),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    StoreRouterConnectingModule,
+    StoreRouterConnectingModule.forRoot(),
     StateModule,
     UiModule
   ],
