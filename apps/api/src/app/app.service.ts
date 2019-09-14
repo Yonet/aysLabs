@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common';
 
-// import { Message } from '@ays-labs/api-interface';
+export interface Message {
+  message: string;
+}
 
 @Injectable()
 export class AppService {
