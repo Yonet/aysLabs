@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 // 3rd party imports
 import { EffectsModule } from '@ngrx/effects';
 import { MatIconModule, MatIconRegistry } from '@angular/material';
-import { NxModule } from '@nrwl/nx';
+import { NxModule } from '@nrwl/angular';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { storeFreeze } from 'ngrx-store-freeze';
@@ -25,10 +25,15 @@ export const routes: Routes = [
   { path: '', redirectTo: '/projects', pathMatch: 'full' },
   {
     path: 'projects',
-    loadChildren: '@AysLabs/feature-projects#FeatureProjectsModule'
+    loadChildren: () =>
+      import('@AysLabs/feature-projects').then(m => m.FeatureProjectsModule)
     // canActivate: [AuthGuard],
   },
-  { path: 'login', loadChildren: '@AysLabs/feature-auth#FeatureAuthModule' },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('@AysLabs/feature-auth').then(m => m.FeatureAuthModule)
+  },
   { path: '**', component: PageNotFoundComponent }
 ];
 

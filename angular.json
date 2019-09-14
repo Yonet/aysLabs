@@ -11,7 +11,7 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@nrwl/builders:node-build",
+          "builder": "@nrwl/node:build",
           "options": {
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
@@ -31,7 +31,7 @@
           }
         },
         "serve": {
-          "builder": "@nrwl/builders:node-execute",
+          "builder": "@nrwl/node:execute",
           "options": {
             "buildTarget": "api:build"
           }
@@ -43,13 +43,11 @@
               "apps/api/tsconfig.app.json",
               "apps/api/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
-          "builder": "@nrwl/builders:jest",
+          "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "apps/api/jest.config.js",
             "tsConfig": "apps/api/tsconfig.spec.json"
@@ -72,13 +70,8 @@
             "main": "apps/c4g/src/main.ts",
             "polyfills": "apps/c4g/src/polyfills.ts",
             "tsConfig": "apps/c4g/tsconfig.app.json",
-            "assets": [
-              "apps/c4g/src/favicon.ico",
-              "apps/c4g/src/assets"
-            ],
-            "styles": [
-              "apps/c4g/src/styles.scss"
-            ],
+            "assets": ["apps/c4g/src/favicon.ico", "apps/c4g/src/assets"],
+            "styles": ["apps/c4g/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -125,14 +118,9 @@
             "polyfills": "apps/c4g/src/polyfills.ts",
             "tsConfig": "apps/c4g/tsconfig.spec.json",
             "karmaConfig": "apps/c4g/karma.conf.js",
-            "styles": [
-              "apps/c4g/src/styles.scss"
-            ],
+            "styles": ["apps/c4g/src/styles.scss"],
             "scripts": [],
-            "assets": [
-              "apps/c4g/src/favicon.ico",
-              "apps/c4g/src/assets"
-            ]
+            "assets": ["apps/c4g/src/favicon.ico", "apps/c4g/src/assets"]
           }
         },
         "lint": {
@@ -142,9 +130,7 @@
               "apps/c4g/tsconfig.app.json",
               "apps/c4g/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -169,9 +155,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/c4g-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -195,10 +179,7 @@
             "main": "apps/demo/src/main.ts",
             "polyfills": "apps/demo/src/polyfills.ts",
             "tsConfig": "apps/demo/tsconfig.app.json",
-            "assets": [
-              "apps/demo/src/favicon.ico",
-              "apps/demo/src/assets"
-            ],
+            "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
             "styles": [
               {
                 "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
@@ -252,14 +233,9 @@
             "polyfills": "apps/demo/src/polyfills.ts",
             "tsConfig": "apps/demo/tsconfig.spec.json",
             "karmaConfig": "apps/demo/karma.conf.js",
-            "styles": [
-              "apps/demo/src/styles.scss"
-            ],
+            "styles": ["apps/demo/src/styles.scss"],
             "scripts": [],
-            "assets": [
-              "apps/demo/src/favicon.ico",
-              "apps/demo/src/assets"
-            ]
+            "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"]
           }
         },
         "lint": {
@@ -269,9 +245,7 @@
               "apps/demo/tsconfig.app.json",
               "apps/demo/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -296,9 +270,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/demo-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -336,9 +308,7 @@
               "libs/feature-auth/tsconfig.lib.json",
               "libs/feature-auth/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -364,9 +334,7 @@
               "libs/feature-project-detail/tsconfig.lib.json",
               "libs/feature-project-detail/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -392,9 +360,7 @@
               "libs/feature-projects/tsconfig.lib.json",
               "libs/feature-projects/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -420,9 +386,7 @@
               "libs/feature-user/tsconfig.lib.json",
               "libs/feature-user/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -455,9 +419,7 @@
               "libs/feature-xr/tsconfig.lib.json",
               "libs/feature-xr/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -483,9 +445,7 @@
               "libs/state/tsconfig.lib.json",
               "libs/state/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -523,9 +483,7 @@
               "libs/ui/tsconfig.lib.json",
               "libs/ui/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -558,9 +516,7 @@
               "libs/ui-shell/tsconfig.lib.json",
               "libs/ui-shell/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -593,9 +549,7 @@
               "libs/ui-xr/tsconfig.lib.json",
               "libs/ui-xr/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -633,9 +587,7 @@
               "libs/utils/tsconfig.lib.json",
               "libs/utils/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -645,9 +597,22 @@
     "warnings": {
       "typescriptMismatch": false,
       "versionMismatch": false,
-      "packageManager": "yarn"
+      "packageManager": "npm"
     },
-    "defaultCollection": "@nrwl/schematics"
+    "defaultCollection": "@nrwl/angular"
   },
-  "defaultProject": "demo"
+  "defaultProject": "demo",
+  "schematics": {
+    "@nrwl/schematics:library": {
+      "unitTestRunner": "karma",
+      "framework": "angular"
+    },
+    "@nrwl/schematics:application": {
+      "unitTestRunner": "karma",
+      "e2eTestRunner": "protractor"
+    },
+    "@nrwl/schematics:node-application": {
+      "framework": "express"
+    }
+  }
 }

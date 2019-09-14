@@ -1,16 +1,13 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc/apps/c4g",
+    "outDir": "../../dist/out-tsc",
     "types": []
   },
-  "exclude": [
-    "src/test.ts",
-    "**/*.spec.ts"
-  ],
+  "exclude": ["src/test.ts", "**/*.spec.ts"],
   "include": [
     "**/*.ts",
     "../../libs/feature-projects/src/index.ts",
     "../../libs/feature-auth/src/index.ts"
-]
+  ]
 }

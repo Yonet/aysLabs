@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 // 3rd party imports
 import { EffectsModule } from '@ngrx/effects';
 import { MatIconModule, MatIconRegistry } from '@angular/material';
-import { NxModule } from '@nrwl/nx';
+import { NxModule } from '@nrwl/angular';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { storeFreeze } from 'ngrx-store-freeze';
@@ -23,11 +23,11 @@ import { environment } from '../environments/environment';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/xr', pathMatch: 'full' },
-  {
-    path: 'xr',
-    loadChildren: '@AysLabs/feature-xr#FeatureXrModule'
-    // canActivate: [AuthGuard],
-  },
+  // {
+  //   path: 'xr',
+  //   loadChildren: () => import('@AysLabs/feature-xr').then(m => m.FeatureXrModule)
+  //   // canActivate: [AuthGuard],
+  // },
   // { path: '', redirectTo: '/projects', pathMatch: 'full' },
   // {
   //   path: 'projects',
