@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import  * as WebXRPolyfill from 'webxr-polyfill';
 
-// const polyfill = new WebXRPolyfill();
 @Component({
   selector: 'ay-root',
   templateUrl: './app.component.html',
@@ -17,7 +15,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     window.addEventListener('deviceorientation', this.handleOrientation, true);
-    console.log('polyfil ', navigator);
+    console.log('polyfill ', navigator);
   }
 
   handleOrientation(event) {

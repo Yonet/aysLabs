@@ -14,7 +14,6 @@ import {
   MeshBasicMaterial,
   Scene,
   VertexColors,
-  VRControls,
   WebGLRenderer
 } from 'three';
 import { ARUtils, ARPerspectiveCamera, ARView, ARDebug } from 'three.ar.js';
@@ -106,7 +105,7 @@ export class CreateAtSurfaceComponent implements OnInit {
     // VRControls is a utility from js that applies the device's
     // orientation/position to the perspective camera, keeping our
     // real world and virtual world in sync.
-    this.vrControls = new VRControls(this.camera, this.onError);
+    // this.vrControls = new VRControls(this.camera, this.onError);
 
     // TODO: move to service with create box method
     this.boxGeometry = new BoxGeometry(
