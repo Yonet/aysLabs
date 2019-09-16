@@ -19,6 +19,7 @@
     "start": "ng serve",
     "server": "ng serve api",
     "build": "ng build",
+    "build:prod": "ng build --project=demo --prod --base-href aysLabs",
     "pages": "ng build --project=demo --prod --output-path docs --base-href aysLabs",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
