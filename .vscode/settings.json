@@ -1,3 +1,8 @@
 {
-  "vsicons.presets.angular": true
+  "vsicons.presets.angular": true,
+  "appService.defaultWebAppToDeploy": "/subscriptions/99aee54f-57d2-4a76-aa5f-96cc0e82f8de/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/aySeeingAIWeb",
+  "appService.deploySubpath": "dist",
+  "appService.zipIgnorePattern": [
+    ".vscode{,/**}"
+  ]
 }
