@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'libs-ui-babylon',
+  name: 'ui-babylon',
   preset: '../../../jest.config.js',
   coverageDirectory: '../../../coverage/libs/ui-babylon',
   snapshotSerializers: [

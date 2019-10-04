@@ -1,5 +1,5 @@
 import { async, TestBed } from '@angular/core/testing';
-import { LibsUiBabylonModule } from './libs-ui-babylon.module';
+import { LibsUiBabylonModule } from './ui-babylon.module';
 
 describe('LibsUiBabylonModule', () => {
   beforeEach(async(() => {

@@ -1,1 +1,1 @@
-export * from './lib/libs-ui-babylon.module';
+export * from './lib/ui-babylon.module';

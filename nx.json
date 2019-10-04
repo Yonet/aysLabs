@@ -12,7 +12,7 @@
       "tags": []
     },
     "c4g": {
-      "tags": []
+      "tags": ["app"]
     },
     "c4g-e2e": {
       "tags": []
@@ -39,7 +39,7 @@
       "tags": []
     },
     "demo": {
-      "tags": []
+      "tags": ["app"]
     },
     "demo-e2e": {
       "tags": []
@@ -57,9 +57,9 @@
       "tags": []
     },
     "babylon": {
-      "tags": []
+      "tags": ["app"]
     },
-    "libs-ui-babylon": {
+    "ui-babylon": {
       "tags": ["ui"]
     }
   }

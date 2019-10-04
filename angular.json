@@ -711,7 +711,7 @@
         }
       }
     },
-    "libs-ui-babylon": {
+    "ui-babylon": {
       "projectType": "library",
       "root": "libs/ui-babylon",
       "sourceRoot": "libs/ui-babylon/src",
