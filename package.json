@@ -13,6 +13,7 @@
     "ng": "./node_modules/.bin/ng",
     "nx": "./node_modules/.bin/nx",
     "api": "ng serve api",
+    "babylon": "ng serve --project=babylon --port=4201",
     "demo": "ng serve --project=demo --port=4201",
     "c4g": "ng serve --project=c4g --port=4204",
     "st": "ng serve --port=3000",
@@ -68,11 +69,14 @@
     "rxjs": "^6.3.3",
     "three": "^0.109.0",
     "three.ar.js": "^0.1.8",
+    "tslib": "^1.10.0",
     "webxr-polyfill": "^1.0.13",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "core-js": "^2.5.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.803.8",
+    "@angular-devkit/build-ng-packagr": "~0.803.8",
     "@angular/cli": "^8.3.8",
     "@angular/compiler-cli": "^8.2.9",
     "@angular/language-service": "^8.2.9",
@@ -93,11 +97,18 @@
     "dotenv": "8.1.0",
     "eslint": "^6.5.1",
     "express": "4.17.1",
+    "ng-packagr": "^5.4.0",
     "ngrx-store-freeze": "^0.2.4",
     "prettier": "1.18.2",
     "ts-jest": "24.1.0",
     "ts-node": "^8.4.1",
+    "tsickle": "^0.37.0",
     "tslint": "~5.20.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "codelyzer": "~5.0.1",
+    "jest-preset-angular": "7.0.0",
+    "cypress": "3.4.1",
+    "@nrwl/cypress": "8.6.0",
+    "jest": "24.1.0"
   }
 }

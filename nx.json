@@ -52,6 +52,15 @@
     },
     "ui-shell": {
       "tags": []
+    },
+    "babylon-e2e": {
+      "tags": []
+    },
+    "babylon": {
+      "tags": []
+    },
+    "libs-ui-babylon": {
+      "tags": ["ui"]
     }
   }
 }

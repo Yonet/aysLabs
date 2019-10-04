@@ -21,11 +21,14 @@
       "@AysLabs/feature-projects": ["libs/feature-projects/src/index.ts"],
       "@AysLabs/feature-user": ["libs/feature-user/src/index.ts"],
       "@AysLabs/state": ["libs/state/src/index.ts"],
-      "@AysLabs/feature-project-detail": ["libs/feature-project-detail/src/index.ts"],
+      "@AysLabs/feature-project-detail": [
+        "libs/feature-project-detail/src/index.ts"
+      ],
       "@AysLabs/feature-auth": ["libs/feature-auth/src/index.ts"],
       "@AysLabs/ui-xr": ["libs/ui-xr/src/index.ts"],
       "@AysLabs/feature-xr": ["libs/feature-xr/src/index.ts"],
-      "@AysLabs/ui-shell": ["libs/ui-shell/src/index.ts"]
+      "@AysLabs/ui-shell": ["libs/ui-shell/src/index.ts"],
+      "@AysLabs/libs/ui-babylon": ["libs/ui-babylon/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

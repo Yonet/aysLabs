@@ -591,10 +591,176 @@
           }
         }
       }
+    },
+    "babylon": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "apps/babylon",
+      "sourceRoot": "apps/babylon/src",
+      "prefix": "AysLabs",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/babylon",
+            "index": "apps/babylon/src/index.html",
+            "main": "apps/babylon/src/main.ts",
+            "polyfills": "apps/babylon/src/polyfills.ts",
+            "tsConfig": "apps/babylon/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/babylon/src/favicon.ico",
+              "apps/babylon/src/assets"
+            ],
+            "styles": ["apps/babylon/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/babylon/src/environments/environment.ts",
+                  "with": "apps/babylon/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "babylon:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "babylon:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "babylon:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/babylon/tsconfig.app.json",
+              "apps/babylon/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/babylon/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/babylon/jest.config.js",
+            "tsConfig": "apps/babylon/tsconfig.spec.json",
+            "setupFile": "apps/babylon/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "babylon-e2e": {
+      "root": "apps/babylon-e2e",
+      "sourceRoot": "apps/babylon-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/babylon-e2e/cypress.json",
+            "tsConfig": "apps/babylon-e2e/tsconfig.e2e.json",
+            "devServerTarget": "babylon:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "babylon:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/babylon-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/babylon-e2e/**"]
+          }
+        }
+      }
+    },
+    "libs-ui-babylon": {
+      "projectType": "library",
+      "root": "libs/ui-babylon",
+      "sourceRoot": "libs/ui-babylon/src",
+      "prefix": "ay",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui-babylon/tsconfig.lib.json",
+            "project": "libs/ui-babylon/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-babylon/tsconfig.lib.json",
+              "libs/ui-babylon/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-babylon/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-babylon/jest.config.js",
+            "tsConfig": "libs/ui-babylon/tsconfig.spec.json",
+            "setupFile": "libs/ui-babylon/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
     "defaultCollection": "@nrwl/node"
   },
-  "defaultProject": "api"
+  "defaultProject": "api",
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  }
 }
