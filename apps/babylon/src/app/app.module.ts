@@ -7,14 +7,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { NxModule } from '@nrwl/angular';
 
 // Lib imports
-
+import { UiBabylonModule } from '@AysLabs/ui-babylon';
 
 // Local imports
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 
 export const routes: Routes = [
-    // { path: '', redirectTo: '/xr', pathMatch: 'full' }
+  { path: '', redirectTo: '/ar', pathMatch: 'full' },
+  {
+    path: 'ar',
+    loadChildren: '@AysLabs/ui-babylon#UiBabylonModule'
+    // canActivate: [AuthGuard],
+  }
 ];
 
 @NgModule({
@@ -22,8 +27,8 @@ export const routes: Routes = [
   imports: [
     BrowserModule,
     NxModule.forRoot(),
-    RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
-    ],
+    RouterModule.forRoot(routes, { initialNavigation: 'enabled' })
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

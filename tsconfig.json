@@ -28,7 +28,7 @@
       "@AysLabs/ui-xr": ["libs/ui-xr/src/index.ts"],
       "@AysLabs/feature-xr": ["libs/feature-xr/src/index.ts"],
       "@AysLabs/ui-shell": ["libs/ui-shell/src/index.ts"],
-      "@AysLabs/libs/ui-babylon": ["libs/ui-babylon/src/index.ts"]
+      "@AysLabs/ui-babylon": ["libs/ui-babylon/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
