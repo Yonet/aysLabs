@@ -65,4 +65,14 @@ export class BabylonService {
     });
     // return scene;
   }
+
+  createXRScene() {
+    let canvas = canvasEl.nativeElement;
+    // Associate a Babylon Engine to it.
+    const engine = new Engine(canvas);
+    var scene = new Scene(engine);
+
+    // TODO: check XR session...
+    return scene;
+  }
 }
