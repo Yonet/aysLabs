@@ -17,12 +17,13 @@ import '@babylonjs/core/Meshes/meshBuilder';
   providedIn: 'root'
 })
 export class BabylonService {
+  private canvas: HTMLCanvasElement;
   constructor() {}
 
-  createScene(canvasEl: HTMLCanvasElement) {
-    let canvas = canvasEl.nativeElement;
+  createScene(canvasEl: any) {
+    this.canvas = canvasEl.nativeElement;
     // Associate a Babylon Engine to it.
-    const engine = new Engine(canvas);
+    const engine = new Engine(this.canvas);
     var scene = new Scene(engine);
 
     console.log('Scene is created ', scene);
@@ -32,8 +33,8 @@ export class BabylonService {
     // This targets the camera to scene origin
     camera.setTarget(Vector3.Zero());
 
-    // This attaches the camera to the canvas
-    camera.attachControl(canvas, true);
+    // This attaches the camera to the this.canvas
+    camera.attachControl(this.canvas, true);
 
     // This creates a light, aiming 0,1,0 - to the sky (non-mesh)
     var light = new HemisphericLight('light1', new Vector3(0, 1, 0), scene);
@@ -66,10 +67,10 @@ export class BabylonService {
     // return scene;
   }
 
-  createXRScene() {
-    let canvas = canvasEl.nativeElement;
+  createXRScene(canvasEl) {
+    this.canvas = canvasEl.nativeElement;
     // Associate a Babylon Engine to it.
-    const engine = new Engine(canvas);
+    const engine = new Engine(this.canvas);
     var scene = new Scene(engine);
 
     // TODO: check XR session...

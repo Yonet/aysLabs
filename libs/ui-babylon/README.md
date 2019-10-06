@@ -1,6 +1,6 @@
 # ui-babylon
 
-This library was generated with [Nx](https://nx.dev).
+[BabylonJS](https://www.babylonjs.com/?WT.mc_id=ayslabs-github-ayyonet) UI library for Angular.
 
 ## Running unit tests
 
