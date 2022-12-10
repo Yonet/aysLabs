@@ -96,7 +96,7 @@
     "angular-cli-ghpages": "^0.6.0",
     "dotenv": "8.1.0",
     "eslint": "^6.5.1",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "ng-packagr": "^5.4.0",
     "ngrx-store-freeze": "^0.2.4",
     "prettier": "1.18.2",
